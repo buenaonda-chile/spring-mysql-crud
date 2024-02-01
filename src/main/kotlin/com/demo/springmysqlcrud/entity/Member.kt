@@ -29,7 +29,7 @@ class Member (
     var status: MemberStatus = status
         protected set
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = [CascadeType.ALL], mappedBy = "book")
+    @OneToMany(fetch = FetchType.LAZY, cascade = [CascadeType.ALL], mappedBy = "member")
     protected val mutableLends: MutableList<Lend> = mutableListOf()
     val lends: List<Lend> get() = mutableLends.toList()
 
